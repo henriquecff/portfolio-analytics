@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projeto de portfólio: dashboard de conciliação de recebíveis com foco em operação financeira, rastreabilidade transacional e suporte ao atendimento.">
+  <title>Conciliação de Recebíveis</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg-light">
+
+  <!-- HEADER HCFDATA -->
+<div class="header">
+  <div class="header-content">
+    
+    <a href="../index.html" class="logo-link">
+      <img src="../assets/logo-hcfdata.jpg" alt="HCFData" class="logo">
+    </a>
+
+    <div class="title-group">
+      <h1>Henrique Feliciano</h1>
+      <p>Data Engineering | Payments & Financial Systems</p>
+    </div>
+
+  </div>
+</div>
+
+      <a href="../index.html" class="btn btn-outline-light ms-auto">← Voltar ao Portfólio</a>
+    </div>
+  </div>
+
+  <main class="container my-5">
+
+    <header class="text-center mb-5">
+      <h1 class="display-5 fw-bold">💳 Conciliação de Recebíveis</h1>
+      <p class="lead text-muted mb-3">
+        Solução analítica desenvolvida para conciliar recebíveis de lojistas entre diferentes meios de pagamento, com foco em visibilidade operacional, rastreabilidade financeira e suporte ao atendimento.
+      </p>
+      <p class="small text-secondary mx-auto" style="max-width: 900px;">
+        Devido à sensibilidade dos dados e ao contexto operacional, este portfólio apresenta versões estáticas dos dashboards.
+        A solução original foi construída com navegação interativa, filtros dinâmicos e drill-down transacional para suporte à conciliação financeira.
+      </p>
+    </header>
+
+    <section id="contexto" class="mb-5">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="h3 mb-3">Contexto</h2>
+          <p class="mb-0">
+            Operações financeiras com múltiplos meios de pagamento exigem controle rigoroso entre o que foi transacionado, liquidado, conciliado e o que ainda permanece pendente.
+            Sem uma visão unificada, a operação depende de planilhas, análises manuais e validações pontuais, aumentando o risco de inconsistência, retrabalho e atraso no atendimento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="modulos" class="mb-5">
+      <h2 class="h3 mb-4">Páginas do projeto</h2>
+
+      <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-4">
+          <h3 class="h4 mb-3">Filtros</h3>
+          <p>
+            Camada de controle operacional responsável por segmentar a análise por período, cliente, documento, responsável, categoria e status de liquidação.
+            Mesmo em versão estática, esta tela evidencia a flexibilidade da solução para isolar cenários específicos e acelerar investigações.
+          </p>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <ul>
+                <li>Recorte por data de transação, liquidação, agenda e boleto</li>
+                <li>Segmentação por cliente, documento e nome fantasia</li>
+                <li>Filtro por status operacional para direcionar atuação</li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <div class="bg-light border rounded p-3">
+                <strong>ROI da tela</strong>
+                <p class="mb-0 mt-2 small">
+                  Reduz tempo de análise, melhora a precisão da investigação e direciona a operação para os casos mais críticos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="assets/01-filters.png" data-lightbox="receivables" data-title="Filtros">
+              <img src="assets/01-filters.png" alt="Tela de filtros" class="img-fluid rounded shadow-sm">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-4">
+          <h3 class="h4 mb-3">Extrato de Clientes <span class="text-primary">(core do negócio)</span></h3>
+          <p>
+            Esta é a principal visão do projeto e a camada mais relevante para a operação.
+            O painel consolida o fluxo financeiro por cliente, permitindo identificar quem está com saldo pendente, entender a composição desse saldo e priorizar a atuação operacional.
+          </p>
+          <p>
+            Pela natureza da análise, esta é uma visão claramente <strong>tática e operacional</strong>:
+            tática porque direciona a priorização da fila e operacional porque suporta a ação efetiva sobre cada cliente.
+          </p>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <h4 class="h6 text-uppercase text-secondary mt-3">Principais indicadores</h4>
+              <ul>
+                <li>Liquidações</li>
+                <li>Saldo pendente</li>
+                <li>Agenda atual</li>
+                <li>Agenda futura</li>
+                <li>Quantidade de clientes com e sem pendência</li>
+                <li>% de clientes e % do líquido impactado</li>
+                <li>Tipo de repasse e status de liquidação</li>
+              </ul>
+
+              <h4 class="h6 text-uppercase text-secondary mt-3">Leitura de negócio</h4>
+              <ul>
+                <li>Prioriza clientes com divergência financeira</li>
+                <li>Mostra a composição do saldo por crédito, títulos, splits, débitos e descontos</li>
+                <li>Permite entender onde a conciliação está travando</li>
+                <li>Transforma backlog operacional em fila objetiva de atuação</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="bg-light border rounded p-3">
+                <strong>ROI da tela</strong>
+                <p class="mb-0 mt-2 small">
+                  Aumenta a velocidade de identificação de pendências, melhora a priorização da operação e acelera a recuperação de valores com inconsistência.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="assets/02-client-extract.png" data-lightbox="receivables" data-title="Extrato de Clientes">
+              <img src="assets/02-client-extract.png" alt="Extrato de Clientes" class="img-fluid rounded shadow-sm">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-4">
+          <h3 class="h4 mb-3">Extrato de Vendas</h3>
+          <p>
+            Camada de rastreabilidade financeira no nível mais granular da operação.
+            Esta tela detalha cada venda e suas respectivas parcelas, permitindo validar o comportamento da liquidação e investigar divergências até a origem.
+          </p>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <h4 class="h6 text-uppercase text-secondary mt-3">O que a tela evidencia</h4>
+              <ul>
+                <li>Granularidade por transação e parcela</li>
+                <li>Valores brutos e líquidos</li>
+                <li>Modalidade, bandeira e produto</li>
+                <li>Datas de transação, pagamento e agendamento</li>
+                <li>Status transacional e modo de recebimento</li>
+              </ul>
+
+              <h4 class="h6 text-uppercase text-secondary mt-3">Objetivo operacional</h4>
+              <ul>
+                <li>Garantir rastreabilidade ponta a ponta</li>
+                <li>Validar se a liquidação ocorreu conforme esperado</li>
+                <li>Investigar inconsistências com profundidade</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="bg-light border rounded p-3">
+                <strong>ROI da tela</strong>
+                <p class="mb-0 mt-2 small">
+                  Reduz tempo de auditoria, elimina a “caixa preta” da operação e aumenta a confiabilidade da conciliação no nível transacional.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="assets/03-sales-extract.png" data-lightbox="receivables" data-title="Extrato de Vendas">
+              <img src="assets/03-sales-extract.png" alt="Extrato de Vendas" class="img-fluid rounded shadow-sm">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-4">
+          <h3 class="h4 mb-3">Comprovante PIX</h3>
+          <p>
+            Tela de apoio ao atendimento e à validação operacional.
+            Aqui a operação localiza uma venda ou pagamento PIX específico, aplica filtros e seleciona o registro correto antes da geração do comprovante final.
+          </p>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <h4 class="h6 text-uppercase text-secondary mt-3">Objetivo da tela</h4>
+              <ul>
+                <li>Localizar rapidamente uma transação PIX</li>
+                <li>Validar os dados antes da geração do comprovante</li>
+                <li>Dar suporte às demandas do atendimento</li>
+              </ul>
+
+              <h4 class="h6 text-uppercase text-secondary mt-3">Valor operacional</h4>
+              <ul>
+                <li>Busca por cliente, documento, lote, parcela e identificador da transação</li>
+                <li>Redução do tempo gasto para encontrar pagamentos específicos</li>
+                <li>Menor dependência de consultas manuais em múltiplos sistemas</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="bg-light border rounded p-3">
+                <strong>ROI da tela</strong>
+                <p class="mb-0 mt-2 small">
+                  Diminui retrabalho do atendimento, acelera a validação do pagamento e melhora a produtividade da operação.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="assets/04-pix-receipt.png" data-lightbox="receivables" data-title="Comprovante PIX">
+              <img src="assets/04-pix-receipt.png" alt="Tela de comprovante PIX" class="img-fluid rounded shadow-sm">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-4">
+          <h3 class="h4 mb-3">Comprovante de Pagamento PIX</h3>
+          <p>
+            Este é o artefato final gerado a partir da seleção realizada na tela anterior.
+            O PDF é enviado ao cliente como comprovação formal do pagamento, fechando o ciclo entre análise, validação e atendimento.
+          </p>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <h4 class="h6 text-uppercase text-secondary mt-3">O que o artefato entrega</h4>
+              <ul>
+                <li>Data e valor do pagamento</li>
+                <li>Dados do pagador e do favorecido</li>
+                <li>Banco, agência e conta</li>
+                <li>Código de autenticação</li>
+                <li>Identificador único da transação</li>
+              </ul>
+
+              <h4 class="h6 text-uppercase text-secondary mt-3">Papel no processo</h4>
+              <ul>
+                <li>Formaliza a comprovação do pagamento</li>
+                <li>Padroniza a comunicação com o cliente</li>
+                <li>Reduz fricção entre operação e atendimento</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="bg-light border rounded p-3">
+                <strong>ROI da tela</strong>
+                <p class="mb-0 mt-2 small">
+                  Resolve uma dor real do atendimento, reduz o tempo de resposta ao cliente e melhora a performance operacional com um artefato confiável e padronizado.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="assets/05-pix-payment-receipt.png" data-lightbox="receivables" data-title="Comprovante de Pagamento PIX">
+              <img src="assets/05-pix-payment-receipt.png" alt="Comprovante de Pagamento PIX" class="img-fluid rounded shadow-sm">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="impacto" class="mb-5">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="h3 mb-3">Impacto e percepção de valor</h2>
+          <ul class="mb-0">
+            <li>Transformação de um processo operacional complexo em fluxo analítico acionável</li>
+            <li>Mais velocidade para identificar pendências e atuar sobre clientes críticos</li>
+            <li>Rastreabilidade financeira do nível cliente ao nível parcela</li>
+            <li>Ganho de eficiência no atendimento com geração estruturada de comprovantes PIX</li>
+            <li>Solução aplicável a contextos de adquirência, intermediação de pagamentos e operações financeiras com alto volume</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="mb-5">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="h3 mb-3">Stack</h2>
+          <span class="badge bg-secondary me-2">Power BI</span>
+          <span class="badge bg-secondary me-2">SQL</span>
+          <span class="badge bg-secondary">DAX</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center mt-5 text-muted">
+      <p class="mb-0">Projeto de portfólio • Conciliação de Recebíveis</p>
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
